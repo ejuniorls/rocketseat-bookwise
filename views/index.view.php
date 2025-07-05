@@ -9,9 +9,9 @@
              <div class="flex">
                  <div class="w-1/3 mt-2">Imagem</div>
                  <div>
-                     <div class="font-semibold mt-2"><a href="/livro.php?id=<?= $livro['id'] ?>" class="font-semibold hover:underline"><?= $livro['titulo'] ?></a></div>
+                     <div class="font-semibold mt-2"><a href="/livro?id=<?= $livro['id'] ?>" class="font-semibold hover:underline"><?= $livro['titulo'] ?></a></div>
                      <div class="text-xs italic mt-2"><?= $livro['autor'] ?></div>
-                     <div class="text-xs italic mt-2">⭐⭐⭐⭐⭐ (<?= $livro['avaliacoes'] ?> avaliações)</div>
+                     <div class="text-xs italic mt-2">⭐⭐⭐⭐⭐ (<?= $livro['numero_avaliacoes'] ?> avaliações)</div>
                  </div>
              </div>
 

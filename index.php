@@ -1,7 +1,9 @@
 <?php
-require_once 'dados.php';
 
-$view = "index";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-require_once 'views/template/app.php';
-?>
+require_once "functions.php";
+
+require_once "routes.php";
