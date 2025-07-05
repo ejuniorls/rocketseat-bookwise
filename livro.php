@@ -10,16 +10,19 @@
 </head>
 
 <?php
+require_once 'dados.php';
 
-$livro = [
-    'titulo'            => $_GET['titulo'],
-    'autor'             => $_GET['autor'],
-    'avaliacao'         => $_GET['avaliacao'],
-    'numero_avaliacoes' => $_GET['numero_avaliacoes'],
-    'descricao'         => $_GET['descricao']
-];
+$idBuscado = (int) $_GET['id'];
 
+$livroEncontrado = array_filter($livros, function ($livro) use ($idBuscado) {
+    return $livro['id'] === $idBuscado;
+});
+
+$livroEncontrado = reset($livroEncontrado);
+
+($livroEncontrado) ? extract($livroEncontrado) : die();
 ?>
+
 
 <body class="bg-stone-950 text-stone-200">
     <header class="bg-stone-900">
@@ -44,7 +47,7 @@ $livro = [
         </form>
 
         <section class="grid grid-cola-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <h1><?= $livro['titulo'] ?></h1>
+            <h1><?= $titulo ?></h1>
         </section>
     </main>
 </body>
