@@ -1,0 +1,30 @@
+# Arquivos e diretórios do sistema
+.DS_Store
+Thumbs.db
+
+# Ambiente do PHP
+vendor/
+composer.lock
+
+# Arquivos de ambiente
+.env
+.env.*
+
+# Logs
+*.log
+
+# Banco de dados (dump ou init, se não quiser versionar)
+.docker/mysql/*.sql
+
+# Diretórios temporários
+tmp/
+cache/
+storage/
+node_modules/
+
+# IDEs e editores
+.vscode/
+.idea/
+
+# Docker
+docker-compose.override.yml

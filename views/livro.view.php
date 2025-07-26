@@ -1,4 +1,5 @@
 <?php
+
 if (!$livro) {
     echo "Livro não encontrado.";
     return;
